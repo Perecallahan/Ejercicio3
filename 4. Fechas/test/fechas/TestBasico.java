@@ -12,7 +12,7 @@ import java.text.ParseException;
 
 /**
  *
- * @author Daniel
+ * @author Daniel Reguera Bazan
  */
 public class TestBasico {
   
@@ -26,6 +26,11 @@ public class TestBasico {
    * 
    * @throws ParseException 
    */
+  
+  /**
+   * testPresente es la unica prueba de borde necesaria. Se espera que sea VALIDA
+   * @throws ParseException 
+   */
   @Test
     public void testPresente() throws ParseException{
         System.out.println("Presente. \n");
@@ -37,7 +42,7 @@ public class TestBasico {
     
     /**
      * Para comprobar si se producen errores, se puede descomentar este método
-     * testAyerError
+     * testAyerError. Se espera que NO sea VALIDA
      */
     
     /*@Test
@@ -49,6 +54,10 @@ public class TestBasico {
         assertEquals(expResult, result);
     }*/
   
+    /**
+     * testFuturo es prueba de equivalencia. Se espera que NO sea VALIDA
+     * @throws ParseException 
+     */
   @Test
     public void testFuturo() throws ParseException{
         System.out.println("Futuro. \n");
@@ -58,6 +67,10 @@ public class TestBasico {
         assertEquals(expResult, result);
     }
     
+    /**
+     * testPasado es prueba de equivalencia. Se espera que sea VALIDA
+     * @throws ParseException 
+     */
     @Test
     public void testPasado() throws ParseException{
         System.out.println("Pasado. \n");

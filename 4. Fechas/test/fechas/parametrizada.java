@@ -15,8 +15,12 @@ import org.junit.runners.Parameterized.Parameters;
 import org.junit.runner.RunWith;
 
 /**
- *
- * @author Daniel
+ * 
+ * @author Daniel Reguera Bazan
+ * Se crean atributos para esta clase.
+ * contadorTiempo es un atributo de clase (estatico), usado para secuenciar imprision de array.
+ * tiempo es un array con string para imprimir la prueba que se esta haciendo
+ * @see testParametros
  */
 @RunWith(value=Parameterized.class)
 public class parametrizada {
@@ -31,6 +35,10 @@ public class parametrizada {
     this.resultadoEsperado = valor;
   }
   
+  /**
+   * 
+   * @return obj fecha y excepcion esperada
+   */
   @Parameters
   public static Iterable<Object> obtenerPrueba(){
     List<Object> obj = new ArrayList<>();
@@ -41,8 +49,16 @@ public class parametrizada {
       return obj;
   }
   
+  /**
+   * un primer print muestra el momento de la prueba, string contenido en array tiempo
+   * la prueba se ejecuta con cada uno de los objetos del array obtenerPrueba
+   * el último print muestra el valor de la prueba y su resultado esperado
+   * se usa atributo de clase contadorTiempo como acumulador con el que ir pasando los
+   *  diferentes momentos de la prueba (presente, futuro y pasado, en array)
+   * @throws ParseException 
+   */
   @Test
-    public void testPresente() throws ParseException{
+    public void testParametros() throws ParseException{
         
         System.out.println(tiempo[contadorTiempo]);
         Fechas instance = new Fechas();

@@ -10,7 +10,12 @@ import org.junit.runners.Suite;
 
 /**
  *
- * @author Daniel
+ * @author Daniel Reguera Bazan
+ */
+
+/**
+ * se lanzan los diferentes test en un orden concreto
+ * @author Daniel Reguera Bazan
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({

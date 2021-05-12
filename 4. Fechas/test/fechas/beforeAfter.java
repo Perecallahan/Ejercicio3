@@ -13,13 +13,16 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Daniel
+ * @author Daniel Reguera Bazan
  */
 public class beforeAfter {
   private static Fechas instance;
   public beforeAfter() {
   }
   
+  /**
+   * se ejecuta antes de cada método
+   */
   @Before
   public void before() {
     
@@ -27,6 +30,9 @@ public class beforeAfter {
     instance = new Fechas();
   }
   
+  /**
+   * se ejecuta después de cada método
+   */
   @After
   public void after() {
     

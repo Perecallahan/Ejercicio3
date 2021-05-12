@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Daniel
+ * @author Daniel Reguera Bazan
  */
 public class beforeAfterClass {
   private static Fechas instance;
@@ -22,12 +22,18 @@ public class beforeAfterClass {
   public beforeAfterClass() {
   }
   
+  /**
+   * Sólo se ejecute una vez antes de iniciar los test de esta clase
+   */
   @BeforeClass
   public static void beforeClass() {
     System.out.println("@BeforeClass--> Inicio \n");
     instance = new Fechas();
   }
   
+  /**
+   * no hace nada porque al terminar la prueba no hace falta borrar nada
+   */
   @AfterClass
   public static void afterClass() {
     System.out.println("@AfterClass--> Fin");
